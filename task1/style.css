@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  text-align: right;
+  background: #f1f5f9;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 12px;
+}
+
+/* Normal buttons */
+button {
+  height: 60px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #2e2e4d;
+  color: white;
+  transition: 0.25s;
+}
+
+/* Hover effect */
+button:hover {
+  transform: translateY(-3px);
+  background: #6366f1;
+}
+
+/* Click effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Special buttons (C & DEL) */
+button:nth-child(1),
+button:nth-child(2) {
+  background: #ff4d6d;
+}
+
+button:nth-child(1):hover,
+button:nth-child(2):hover {
+  background: #e63946;
+}
+
+/* Equal button */
+button:nth-child(16) {
+  background: #00b894;
+}
+
+button:nth-child(16):hover {
+  background: #019875;
+}
+
+/* Zero button */
+.zero {
+  grid-column: span 2;
+}
