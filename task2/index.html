@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- FRONT PAGE -->
+<div id="home">
+  <h1>Welcome to My Gallery 🌿</h1>
+  <p>Click below to explore beautiful images</p>
+  <button onclick="showGallery()">View Gallery</button>
+</div>
+
+<!-- GALLERY PAGE -->
+<div id="gallery-page">
+
+<h1>My Beautiful Gallery ✨</h1>
+
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+</div>
+
+<div class="gallery">
+
+  <div class="img-box nature"><img src="https://picsum.photos/id/1015/800/600" onclick="openLightbox(0)"></div>
+  <div class="img-box city"><img src="https://picsum.photos/id/1011/800/600" onclick="openLightbox(1)"></div>
+  <div class="img-box nature"><img src="https://picsum.photos/id/1018/800/600" onclick="openLightbox(2)"></div>
+  <div class="img-box city"><img src="https://picsum.photos/id/1025/800/600" onclick="openLightbox(3)"></div>
+  <div class="img-box nature"><img src="https://picsum.photos/id/1035/800/600" onclick="openLightbox(4)"></div>
+  <div class="img-box city"><img src="https://picsum.photos/id/1040/800/600" onclick="openLightbox(5)"></div>
+
+</div>
+
+<button class="back-btn" onclick="goHome()">⬅ Back</button>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+
+  <button class="prev" onclick="prevImage()">❮</button>
+  <button class="next" onclick="nextImage()">❯</button>
+
+  <button class="zoom-in" onclick="zoomIn()">＋</button>
+  <button class="zoom-out" onclick="zoomOut()">－</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
