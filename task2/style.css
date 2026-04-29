@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* HOME */
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 50px;
+}
+
+#home button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  background: mediumseagreen;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home button:hover {
+  background: seagreen;
+  transform: scale(1.1);
+}
+
+/* GALLERY */
+#gallery-page {
+  display: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.img-box {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+/* FILTER */
+.filters button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  background: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+
+/* BACK */
+.back-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: seagreen;
+  color: white;
+}
+
+/* LIGHTBOX */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+/* CLOSE */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* NEXT PREV */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+/* ZOOM BUTTONS */
+.zoom-in, .zoom-out {
+  position: absolute;
+  bottom: 30px;
+  font-size: 25px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  color: white;
+}
+
+.zoom-in { right: 80px; }
+.zoom-out { right: 30px; }
+
+.zoom-in:hover, .zoom-out:hover {
+  background: seagreen;
+}
